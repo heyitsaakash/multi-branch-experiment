@@ -25,10 +25,7 @@ pipeline {
          steps {
              echo ' entered the build phase for dev'
         }
-         post {
-
-            echo 'post build phase for dev'
-            }
+        
         }
          
       
