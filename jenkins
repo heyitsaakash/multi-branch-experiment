@@ -1,0 +1,53 @@
+pipeline {
+   agent any
+
+   tools {
+      // Install the Maven version configured as "M3" and add it to the path.
+      //maven "M3"
+      maven "mavenhome"
+   }
+
+   stages {
+       
+       stage('Code Checkout') {
+            steps{
+               echo 'Checking out code dev branch ...'
+              
+                
+                
+            }
+        }
+        
+    
+      stage('Build') {
+          
+         
+         steps {
+             echo ' entered the build phase for dev'
+        }
+         post {
+
+            echo 'post build phase for dev'
+            }
+        }
+         
+      
+      
+     
+     
+      
+       //add a stage to deploy to gcp-app engine standard
+      stage('Deploy-GCP-App-Engine') {
+          
+         
+         steps {
+             
+            echo 'steps to deploy to gcp app engine'
+           
+         }
+        }
+        
+      }
+      
+   
+}
