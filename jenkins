@@ -25,10 +25,7 @@ peline {
          steps {
              echo ' entered the build phase for master'
         }
-         post {
-
-            echo 'post build phase for master'
-            }
+         
         }
          
       
